@@ -18,6 +18,8 @@ public class LaunchProjectile : MonoBehaviour
         if (Input.GetKeyDown (KeyCode.P))
         {
             GameObject t = (GameObject)Instantiate(projectile, transform.position, Quaternion.identity);
+            Destroy(t, 3);
+            t.GetComponent<Rigidbody>().AddForce(transform.forward * 500);
         }
     }
 }
