@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThirdPersonController
       objectReference: {fileID: 0}
+    - target: {fileID: 149790, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
       propertyPath: m_LocalPosition.x
       value: 31.103283
@@ -428,6 +432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 1455072674071174668, guid: 0d895c20062e9244b8a32dd4adcaa913,
     type: 3}
+  target: {fileID: 1400940523}
 --- !u!1 &1157601944
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,6 +527,12 @@ Transform:
 --- !u!4 &1309641535 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 211799596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1400940523 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 149790, guid: 7737647c22c1fc64a88d5cd030c352ce,
     type: 3}
   m_PrefabInstance: {fileID: 211799596}
   m_PrefabAsset: {fileID: 0}
@@ -624,6 +635,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5487390005492312247, guid: 0d895c20062e9244b8a32dd4adcaa913,
+        type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 3}
     - target: {fileID: 1455072674071174668, guid: 0d895c20062e9244b8a32dd4adcaa913,
         type: 3}
       propertyPath: m_Name

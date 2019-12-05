@@ -5,7 +5,8 @@ using UnityEngine;
 public class LaunchProjectile : MonoBehaviour
 {
     public GameObject projectile;
-    public GameObject target; 
+    public GameObject target;
+    float time;
 
     // Start is called before the first frame update
     void Start()
@@ -16,12 +17,17 @@ public class LaunchProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown (KeyCode.P))
+        time += Time.deltaTime;
+        if (time >= 2.0)
         {
-            transform.LookAt(target.transform);
-            GameObject t = (GameObject)Instantiate(projectile, transform.position, Quaternion.identity);
-            Destroy(t, 3);
-            t.GetComponent<Rigidbody>().AddForce(transform.forward * 500);
+            time = 0;
+         //   if (Input.GetKeyDown(KeyCode.P))
+          //  {
+                transform.LookAt(target.transform);
+                GameObject t = (GameObject)Instantiate(projectile, transform.position, Quaternion.identity);
+                Destroy(t, 3);
+                t.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
+        //    }
         }
     }
 }
