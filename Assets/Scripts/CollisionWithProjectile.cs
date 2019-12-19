@@ -8,7 +8,7 @@ public class CollisionWithProjectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -19,7 +19,13 @@ public class CollisionWithProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player") Destroy(collision.gameObject, 1);
+        //if (collision.gameObject.tag == "Player") Destroy(collision.gameObject, 1);
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(collision.gameObject, 1);
+            collision.gameObject.transform.position = new Vector3(0,0,0);//GameObject.Find("start").transform.position;
+            Debug.Log("Collision with Player");
+        }
         Instantiate(explosion, transform.position, Quaternion.identity);
     }
 }
