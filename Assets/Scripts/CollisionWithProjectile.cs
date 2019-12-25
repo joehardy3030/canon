@@ -22,10 +22,11 @@ public class CollisionWithProjectile : MonoBehaviour
         //if (collision.gameObject.tag == "Player") Destroy(collision.gameObject, 1);
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(collision.gameObject, 1);
+           // Destroy(collision.gameObject, 1);
             collision.gameObject.transform.position = new Vector3(0,0,0);//GameObject.Find("start").transform.position;
             Debug.Log("Collision with Player");
         }
         Instantiate(explosion, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }
